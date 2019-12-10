@@ -1,0 +1,103 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: #fff;
+  max-width: 600px;
+  min-width: 250px;
+  width: 100%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)
+}
+
+.form-login {
+  width: 100%;
+  padding: 40px;
+}
+
+.form-login .field {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.form-login input {
+  width: 100%;
+  border: 1px solid #191919;
+  background: none;
+  font-size: 22px;
+  padding: 5px 10px;
+  color: #191D21;
+  outline: #085798;
+}
+
+.form-login input:focus {
+  outline: 0;
+  border: 2px solid #085798;
+}
+
+.password {
+  position: relative;
+}
+
+.show-password {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #085798;
+}
+
+.forgot-password-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.forgot-password {
+  text-decoration: none;
+  color: #085798;
+  font-weight: 550;
+}
+
+.form-login button {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-size: 22px;
+  font-weight: 900;
+  color: #fff;
+  background: #085798;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.signup {
+  text-align: center;
+  font-size: 22px;
+}
+
+.signup a {
+  text-decoration: none;
+  color: #085798;
+  font-weight: 600;
+}

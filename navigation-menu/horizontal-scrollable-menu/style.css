@@ -1,0 +1,18 @@
+.scrollablemenu {
+  background: #333333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 14px;
+  font-size: 20px;
+  text-align: center;
+}
+
+a:hover {
+  background: #777777;
+}

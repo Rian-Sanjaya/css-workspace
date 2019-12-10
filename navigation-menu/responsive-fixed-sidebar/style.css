@@ -1,0 +1,79 @@
+*, *::before, *::after {
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -moz-box-sising: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sidebar {
+  padding: 10px 0px;
+  height: 100%;           /* Full-height: remove this if you want "auto" height */
+  width: 160px;
+  background: #EEEEEE;
+  position: fixed;        /* Fixed Sidebar (stay in place on scroll) */
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow-x: hidden;     /* Disable horizontal scroll */
+}
+
+.sidebar a {
+  text-decoration: none;
+  display: block;
+  padding: 6px 8px 6px 16px;
+  font-size: 1.2rem;
+}
+
+.sidebar a:hover {
+  background: #fff;
+}
+
+.main-content {
+  margin-left: 160px;   /* Same as the width of the sidebar */
+  padding: 0 10px;
+  font-size: 28px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    display: inline-block;
+    /* height: 38px; */
+    width: 100%;
+    position: initial;
+    padding: 0 10px;
+  }
+
+  .sidebar a {
+    display: inline-block;
+    /* height: 38px; */
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar {
+    display: block;
+    padding: 0;
+  }
+
+  .sidebar a {
+    display: block;
+    text-align: center;
+  }
+}

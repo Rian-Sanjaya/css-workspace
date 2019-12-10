@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <nav>
+      <div class="home-nav">
+        <a href="#">Home</a>
+      </div>
+
+      <ul>
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">Javascript</a></li>
+        <li><a href="#">SQL</a></li>
+        <li><a href="#">Python</a></li>
+        <li><a href="#">SQL</a></li>
+        <li><a href="#">PHP</a></li>
+        <li><a href="#">Bootstrap</a></li>
+        <li><a href="#">JQuery</a></li>
+        <li class="react-nav"><a href="#">React</a></li>
+        <li class="redux-nav"><a href="#">Redux</a></li>
+        <li class="drophover">
+          <!-- <a href="#">dropHover</a> -->
+          <button class="dropbtn">dropHover <i class="fa fa-caret-down"></i></button>
+          <div class="drophover-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </li>
+        <li>
+          <a href="#" class="" id="more-nav" onclick="moreMenu()">More
+            <span class="triangle-down" id="more-down"><i class="fa fa-caret-down" aria-hidden="true"></i></span><span class="triangle-up hide" id="more-up"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
+          </a>
+        </li>
+      </ul>
+
+      <div>
+        <a href="#">Search</a>
+      </div>
+    </nav>
+
+    <div class="more-menu hide" id="more-menu-id">
+      <div>
+        <h3>HTML and CSS</h3>
+        <ul>
+          <li><a href="#">Learn HTML</a></li>
+          <li><a href="#">Learn CSS</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>JavaScript</h3>
+        <ul>
+          <li><a href="#">Learn Javascript</a></li>
+          <li><a href="#">Learn JQuery</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function moreMenu() {
+      let more = document.getElementById("more-nav")
+      let moreDown = document.getElementById("more-down")
+      let moreUp = document.getElementById("more-up")
+      let moreMenu = document.getElementById("more-menu-id")
+
+      if (more.className === "showMenu") {
+        more.className = ""
+        moreDown.className = "triangle-down"
+        moreUp.className += " hide"
+        moreMenu.className += " hide"
+
+      } else {
+        more.className = "showMenu"
+        moreDown.className += " hide"
+        moreUp.className = "triangle-up"
+        moreMenu.className = "more-menu"
+      }
+    }
+  </script>
+</body>
+</html>

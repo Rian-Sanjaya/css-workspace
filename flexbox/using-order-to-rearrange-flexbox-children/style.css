@@ -1,0 +1,48 @@
+body {
+ display: flex; 
+ flex-direction: column;
+ background: white;
+ font-family: "Open Sans", sans-serif;
+}
+
+/* flexbox order default is 0, when the order is the same it will order based on it appear in html order */
+.main-header {
+  background: #B61E32;
+  padding: 10px;
+}
+
+.main-nav {
+  order: 1;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.main-nav li {
+  width: 100px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #00a9d9;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  background: #F7CE2B;
+  min-height: 40vh;
+  padding: 10px;
+}
+
+.main-footer {
+  background: #ABC999;
+  padding: 10px;
+  order: 1;
+}

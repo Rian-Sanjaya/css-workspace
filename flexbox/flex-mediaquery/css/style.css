@@ -1,0 +1,75 @@
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+/* .box1, .box2, .box3, .box4 { margin-right: 10px; } */
+.box1 {
+  /* flex: 1; */
+  /* width: 25%; */
+  flex-basis: 25%;
+  border: 1px solid;
+}
+
+.box2 {
+  /* flex: 1; */
+  /* width: 25%; */
+  flex-basis: 25%;
+  border: 1px solid;
+}
+
+.box3 {
+  /* flex: 1; */
+  /* width: 25%; */
+  flex-basis: 25%;
+  border: 1px solid;
+}
+
+.box4 {
+  /* flex: 1; */
+  /* width: 25%; */
+  flex-basis: 25%;
+  border: 1px solid;
+}
+
+@media (max-width: 1000px) {
+  .box1 {
+    /* width: 33%; */
+    flex-basis: 33%;
+  }
+
+  .box2 {
+    /* width: 33%; */
+    flex-basis: 33%;
+  }
+
+  .box3 {
+    /* width: 33%; */
+    flex-basis: 33%;
+  }
+
+  .box4 {
+    /* width: 33%; */
+    flex-basis: 33%;
+  }
+}
+
+@media (max-width: 500px) {
+  .box1, .box2, .box3, .box4 { 
+    /* width: 50%  */
+    flex-basis: 50%;
+  }
+}
