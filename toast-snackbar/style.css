@@ -1,0 +1,55 @@
+#toast-box {
+  min-width: 250px;
+  padding: 16px;
+  background-color: #333;
+  color: #fff;
+  /* text-align: center; */
+  z-index: 99;
+  border-radius: 3px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  visibility: hidden;
+  font-size: 17px;
+  white-space: nowrap;
+}
+
+.close-toast {
+  position: absolute;
+  top: 0; right: 0;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#toast-box.show {
+  visibility: visible;
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -moz-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.7s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
