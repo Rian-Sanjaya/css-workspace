@@ -1,0 +1,44 @@
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  padding: 10px;
+}
+
+.left {
+  flex-basis: 25%;
+  background-color: #aaa;
+}
+
+.right {
+  flex-basis: 25%;
+  background-color: #ccc;
+}
+
+.middle {
+  flex-basis: 50%;
+  background-color: #bbb;
+}
+
+@media only screen and (max-width: 628px) {
+  .column {
+    flex-basis: 100%;
+  }
+}

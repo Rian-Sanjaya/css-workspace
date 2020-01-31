@@ -36,6 +36,17 @@ body {
 .form-login .field {
   width: 100%;
   margin-bottom: 30px;
+  position: relative;
+}
+
+.field label {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  letter-spacing: 1px;
+  /* transform: translateY(-35px); */
+  transition: all ease-in 0.25s;
+  /* opacity: 0; */
 }
 
 .form-login input {
@@ -48,9 +59,18 @@ body {
   outline: #085798;
 }
 
+.form-login input::placeholder {
+  opacity: 0;
+}
+
 .form-login input:focus {
   outline: 0;
   border: 2px solid #085798;
+}
+
+.form-login input:focus + label {
+  top: -26px;
+  left: 0;
 }
 
 .password {

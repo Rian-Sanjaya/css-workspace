@@ -1,0 +1,46 @@
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.left {
+  background-color: #aaa;
+  width: 25%;
+}
+
+.middle {
+  background-color: #bbb;
+  width: 50%;
+}
+
+.right {
+  background-color: #ccc;
+  width: 25%;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* clear floats after the columns */
+.row::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (max-width: 628px) {
+  .column {
+    width: 100%;
+  }
+}
