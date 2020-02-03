@@ -1,0 +1,32 @@
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid black;
+}
+
+.arrow-down {
+  margin-top: 50px;
+  width: 0;
+  height: 0;
+  border-top: 30px solid black;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+}
+
+.arrow-left {
+  margin-top: 50px;
+  width: 0;
+  height: 0;
+  border-right: 50px solid blue;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+}
+
+.arrow-right {
+  margin-top: 50px;
+  border-left: 80px solid green;
+  border-top: 80px solid transparent;
+  border-bottom: 80px solid transparent;
+}
