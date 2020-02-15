@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rotate</title>
+
+  <style>
+    div.box {
+      margin-top: 20px;
+      width: 100px;
+      height: 50px;
+      background-color:burlywood;
+    }
+
+    div.box-rotate {
+      width: 100px;
+      height: 50px;
+      background-color:coral;
+      -ms-transform: rotate(20deg) translate(-10px, -22px); /*ie9*/
+      transform: rotate(20deg) translate(-10px, -22px);
+    }
+  </style>
+</head>
+<body>
+  <div>
+    The rotate() method rotates an element clockwise or counter-clockwise according to a given degree.
+  </div>
+  <div class="box"></div>
+  <div class="box-rotate"></div>
+</body>
+</html>
