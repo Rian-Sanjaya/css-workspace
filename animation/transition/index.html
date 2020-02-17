@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transition</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      transition: width 2s linear 1s; /* property duration timing-function delay */
+    }
+
+    div:hover {
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <p>CSS transitions allows you to change property values smoothly, over a given duration.</p>
+  <p>The transition-timing-function property can have the following values:</p>
+  <ul>
+    <li>ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)</li>
+    <li>linear - specifies a transition effect with the same speed from start to end</li>
+    <li>ease-in - specifies a transition effect with a slow start</li>
+    <li>ease-out - specifies a transition effect with a slow end</li>
+    <li>ease-in-out - specifies a transition effect with a slow start and end</li>
+    <li>cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function</li>
+  </ul>
+  <p>Hover over the div element below, to see the transition effect:</p>
+  <div></div>
+</body>
+</html>

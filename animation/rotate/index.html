@@ -21,6 +21,25 @@
       -ms-transform: rotate(20deg) translate(-10px, -22px); /*ie9*/
       transform: rotate(20deg) translate(-10px, -22px);
     }
+
+    div.rotate {
+      margin-top: 20px;
+      width: 100px;
+      height: 100px;
+      border: 2px solid #000;
+      background-color:crimson;
+      transition: 2s;
+      color: #fff;
+    }
+
+    div.rotate.start {
+      transform: rotate(180deg);
+      transition: transform 2s ease;
+    }
+
+    /* div.rotate:hover {
+      transform: rotate(180deg);
+    } */
   </style>
 </head>
 <body>
@@ -29,5 +48,40 @@
   </div>
   <div class="box"></div>
   <div class="box-rotate"></div>
+  <div id="rotateDiv" class="rotate" onmouseover="rotate()">rotate box</div>
+
+  <script>
+    function rotate() {
+      var rotateD = document.getElementById("rotateDiv")
+
+      if (rotateD.getAttribute("style")) {
+        if (rotateD.getAttribute("style").includes("transform: rotate(180deg")) {
+          rotateD.style.transform = "rotate(360deg)"
+          setTimeout(() => {
+            rotateD.style.transition = "0s"
+            rotateD.style.transform = "rotate(0deg)"
+            // rotateD.style.transition = "2s"
+          }, 2000)
+        } else if (rotateD.getAttribute("style").includes("transform: rotate(0deg")) {
+          if (rotateD.getAttribute("style").includes("transition: all 0s ease 0s")) {
+            rotateD.style.transition = "2s"
+          }
+          rotateD.style.transform = "rotate(180deg)"
+        }
+      } else {
+        rotateD.style.transform = "rotate(180deg)"
+      }
+
+      // rotateD.addEventListener("mouseover", function() {
+      //   var r = this
+
+      //   r.classList.add("start")
+      //   setTimeout(() => {
+      //     r.classList.remove("start")
+      //   }, 2000)
+      // }, false)
+
+    }
+  </script>
 </body>
 </html>
