@@ -1,0 +1,124 @@
+
+/* Page Styles
+================================ */
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body,
+.main-wrapper,
+.col {
+	height: 100%;
+}
+
+body {
+	font: normal 1.1em/1.5 sans-serif;
+	color: #222;
+	background-color: #edeff0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*.main-wrapper {
+	width: 90%;
+	margin: auto;
+}*/
+
+.main-header { background-color: #384047; }
+.main-logo { background-color: #5fcf80; }
+.main-nav li { background-color: #3f8abf; }
+.primary-content { background-color: #caebf6; }
+.secondary-content { background-color: #bfe3d0; }
+.main-footer { background-color: #b7c0c7; }
+
+.main-header {
+	padding: 20px; /* removes the colapsing h1 top margin with the body margin */
+	display: table;
+	width: 100%; /* 100% is the width of its container (.main-wrapper) */
+	min-height: 150px;
+}
+
+/*.main-logo,
+.main-nav,*/
+.main-nav li {
+	display: inline-block;
+}
+
+.main-logo,
+.main-nav {
+	display: table-cell; /* make elements as a cell of .main-header table element */
+	vertical-align: middle;
+}
+
+.main-logo,
+.main-nav li {
+	border-radius: 5px;
+}
+
+.main-logo {
+	width: 120px;
+}
+
+.main-nav { padding-left: 50px; /* create gap from .main-logo, cannot use margin on elements that displayed as table */ }
+
+.main-nav li { 
+	margin-right: 10px; /* create gaps between li */
+}
+
+.main-logo a,
+.main-nav a {
+	color: #fff;
+	display: block;
+	padding: 10px 20px;
+	text-align: center;
+}
+
+.main-banner {
+	background: #ebedee;
+	text-align: center;
+	padding: 35px 15px;
+}
+
+.col {
+	display: inline-block;
+	padding: 20px;
+	/* to solve the white spacing of inline-block, 
+	/* as without it the .secondary-content falls on a new line even the width is 100% combined with primary */
+	margin-right: -5px; 
+	vertical-align: top; /* making the .secondary-content aligned top with .primary-content, inline-block by default is vertically aligneg bottom */
+}
+
+.primary-content {
+	width: 60%;
+}
+
+.secondary-content {
+	width: 40%;
+}
+
+.main-footer {
+	text-align: center;
+	padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+	.main-logo,
+	.main-nav,
+	.main-nav li,
+	.col {
+		display: block;
+		width: initial; /* set width as initial default value */
+		height: initial;
+		margin: initial; /* set margin to its default value (which is no margin / zero margin) */
+	}
+
+	.main-nav { padding: initial; /* set padding to its default value (which is no padding / zero padding) */ }
+
+	.main-nav li { margin-top: 15px; }
+
+	.main-banner { display: none; }
+}

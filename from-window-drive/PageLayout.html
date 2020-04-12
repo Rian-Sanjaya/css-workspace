@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Page Layout</title>
+  <style type="text/css">
+    #header {
+	  height: 20px;
+	  background-color: grey;
+	}
+
+    #main {
+	  float: left;
+	  width: 60%;
+	  margin: 0 5%;
+	  height: 300px;
+	  background-color: blue;
+	  color: white;
+	}
+
+	#extra {
+	  float: left;
+	  width: 25%;
+	  margin: 0 5% 0 0;
+	  height: 200px;
+	  background-color: red;
+	}
+
+	#footer {
+	  clear: left;
+	  height: 20px;
+	  background-color: grey;
+	}
+
+	#header1 {
+	  height: 20px;
+	  background-color: grey;
+	  margin-top: 10px;
+	}
+
+	#links1 {
+		float: left;
+		width: 22.5%;
+		margin: 0 0 0 2.5%;
+		background-color: red;
+		height: 200px;
+	}
+
+	#main1 {
+		float: left;
+		width: 45%;
+		margin: 0 2.5%;
+		background-color: blue;
+		color: white;
+		height: 300px;
+	}
+	#news1 {
+		float: left;
+		width: 22.5%;
+		margin: 0 2.5% 0 0;
+		background-color: green;
+		height: 200px;
+	}
+	#footer1 {
+		clear: left;
+		background-color: grey;
+		height: 20px;
+	}
+
+	#header2 {
+	  margin-top: 10px;
+	  background-color: grey;
+	  height: 20px;
+	}
+
+	#content2 {
+	  position: relative;
+	  margin: 0;
+	}
+
+	#news2 {
+	  position: absolute;
+	  top: 0;
+	  left: 2.5%;
+	  width: 20%;
+	  margin: 0;
+	  background-color: green;
+	  height: 200px;
+	}
+
+	#main2 {
+	  position: absolute;
+	  top: 0;
+	  left: 25%;
+	  width: 50%;
+	  margin: 0;
+	  background-color: blue;
+	  color: white;
+	  height: 300px;
+	}
+
+	#links2 {
+	  position: absolute;
+	  top: 0;
+	  right: 2.5%;
+	  margin: 0;
+	  width: 20%;
+	  background-color: red;
+	  height: 200px;
+	}
+  </style>
+</head>
+
+<body>
+  <div id="header">Two Columns Using Float, Fluid Layout</div>
+  <div id="main">Set widths on both column elements and float them to the left. Clear the
+footer to keep it at the bottom of the page</div>
+  <div id="extra">List of links and news</div>
+  <div id="footer">Copyright information</div>
+
+  <div id="header1">Three Columns Using Float, Fluid Layout</div>
+  <div id="links1">List of links</div>
+  <div id="main1">Set widths on all three-column elements and float them to the left. Clear the
+footer to keep it at the bottom of the page.</div>
+  <div id="news1">News items</div>
+  <div id="footer1">Copyright information</div>
+
+  <div id="header2">Three Columns Using Position, Fluid Layout</div>
+  <div id="content2">
+    <div id="main2">Wrap the three content divs (#main, #news, #links) in a div (#content) to
+serve as a containing block for the three positioned columns. Then give the
+column elements widths and position them in the containing #content element.</div>
+    <div id="news2">News items</div>
+    <div id="links2">List of links</div>
+  </div>
+</body>
+</html>

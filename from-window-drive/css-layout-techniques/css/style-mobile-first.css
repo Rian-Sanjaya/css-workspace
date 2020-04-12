@@ -1,0 +1,119 @@
+
+/* Page Styles
+================================ */
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body{
+	height: 100%;
+}
+
+body {
+	font: normal 1.1em/1.5 sans-serif;
+	color: #222;
+	background-color: #edeff0;
+}
+
+/* Layout Element Colors
+================================ */
+
+.main-header       { background-color: #384047; }
+.main-logo a       { background-color: #5fcf80; }
+.main-nav a       { background-color: #3f8abf; }
+.primary-content   { background-color: #caebf6; }
+/*.secondary-content { background-color: #bfe3d0; }*/
+.main-footer       { background-color: #b7c0c7; }
+
+.main-header {
+	padding: 15px;
+}
+
+.main-logo {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.main-nav li {
+	margin-top: 15px;
+}
+
+.main-logo a,
+.main-nav a {
+	display: block;
+	padding: 5px 15px;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	border-radius: 5px;
+}
+
+.main-footer {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+.col {
+	padding: 20px;
+}
+
+.main-banner,
+.extra-content {
+	display: none;
+}
+
+.feat-img {
+	width: 100%;
+	border: 1px solid;
+	padding: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+@media screen and (min-width: 769px) {
+	.main-logo {
+		display: inline-block;
+		width: 150px;
+	}
+
+	.main-nav {
+		float: right;
+	}
+
+	.main-nav li { 
+		float: left;
+		margin-left: 15px;
+	}
+
+	.main-banner {
+		text-align: center;
+		padding: 35px 15px;
+		background: #dfe2e4;
+	}
+
+	.col {
+		float: left;
+		width: 30%;
+	}
+
+	.primary-content { width: 40%; }
+
+	.col:last-child { float: right; }
+
+	.main-banner,
+	.extra-content { display: block; }
+
+	.clearfix {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+	.feat-img {
+		float: left;
+		width: 50%;
+		margin-right: 25px;
+	}

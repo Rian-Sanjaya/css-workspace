@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style type="text/css">
+    #main {
+	  position: relative;
+	  max-width: 600px;  
+	  margin: 0 auto; /* align horizontally */
+	  border: 3px solid #b0e0e6;
+	}
+	
+	.label {
+	  background-color: #b0e0e6;
+	}
+	
+	.endlabel {
+	  background-color: #b0e0e6;
+	  position: absolute;
+	  right: 0;
+	  bottom: 0;
+	}
+  </style>
+  <title>CSS - max-width</title>
+</head>
+
+<body>
+<div id="main" class="elem">
+  <span class="label">&lt;div id="main"></span>
+  <p>
+    Using <code>max-width</code> instead of <code>width</code> in this situation will improve the browser's handling of small windows. This is important when making a site usable on mobile. Resize this page to check it out!
+  </p>
+  <p>
+    By the way, <code>max-width</code> is supported by all major browsers including IE7+ so you shouldn't be afraid of using it.
+  </p>
+  <span class="endlabel">&lt;/div></span>
+</div>
+</body>
+
+</html>

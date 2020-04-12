@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Transitions, Transforms and Animation</title>
+  
+  <style>
+    a.smooth {
+	  display: block;
+	  background-color: mediumblue;
+	  color: #fff;
+	  text-decoration: none;
+	  width: 10em;
+	  border-radius: 1.5em;
+	  text-align: center;
+	  padding: 1em 2em;
+	  transition-property: background-color;
+	  transition-duration: 0.3s;
+	}
+	
+	a.smooth:hover, a.smooth:focus {
+	  background-color: red;
+	}
+	
+	a.width-trans {
+	  text-decoration: none;
+	  border: 2px solid green;
+	  padding: 1em 2em;
+	  margin-top: 10px;
+	  display: block;
+	  width: 10em;
+	  text-align: center;
+	  transition-property: width;
+	  transition-duration: 0.3s;
+	}
+	
+	a.width-trans:hover, a.width-trans:focus {
+	  width: 20em;
+	}
+	
+	a.letter-spacing-trans {
+	  display: block;
+	  margin-top: 10px;
+	  background-color: mediumblue;
+	  color: #fff;
+	  text-decoration: none;
+	  width: 10em;
+	  border-radius: 1.5em;
+	  text-align: center;
+	  padding: 1em 2em;
+	  -webkit-transition: letter-spacing 0.3s 0.2s;
+	  -moz-transition: letter-spacing 0.3s 0.2s;
+	  -o-transition: letter-spacing 0.3s 0.2s;
+	  -ms-transition: letter-spacing 0.3s 0.2s;
+	  transition: letter-spacing 0.3s 0.2s;
+	}
+	
+	a.letter-spacing-trans:hover, a.letter-spacing-trans:focus {
+	  text-align: center;
+	  letter-spacing: 0.3em;
+	}
+	
+	a.multiple-trans {
+	  display: block;
+	  margin-top: 10px;
+	  background-color: mediumblue;
+	  color: #fff;
+	  text-decoration: none;
+	  width: 10em;
+	  border-radius: 1.5em;
+	  text-align: center;
+	  padding: 1em 2em;
+	  -webkit-transition: background-color 0.3s, color 1s, letter-spacing 0.3s;
+	  -moz-transition: background-color 0.3s, color 1s, letter-spacing 0.3s;
+	  -o-transition: background-color 0.3s, color 1s, letter-spacing 0.3s;
+	  -ms-transition: background-color 0.3s, color 1s, letter-spacing 0.3s;
+	  transition: background-color 0.3s, color 1s, letter-spacing 0.3s;
+	}
+	
+	a.multiple-trans:hover, a.multiple-trans:focus {
+	  background-color: red;
+	  color: black;
+	  text-align: center;
+	  letter-spacing: 0.3em;
+	}
+	
+	ul.rollover-effect {
+	  list-style-type: none;
+	  padding: 0;
+	  margin: 10px 0;
+	}
+	
+	ul.rollover-effect li {
+	  float: left;
+	}
+	
+	ul.rollover-effect a {
+	  display: block;
+	  width: 6em;
+	  background-color: rgb(190, 190, 190);
+	  margin: 0 5px;
+	  text-decoration: none;
+	  text-align: center;
+	  color: #fff;
+	  border: 2px solid rgb(175,175,175);
+	  border-radius: 6px;
+	  text-shadow: #666 .1em .1em .1em;
+	  box-shadow: 0 5px 3px rgba(0,0,0,.5);
+	  position: relative;
+	  -webkit-transition: background-color 0.2s, border-color 0.2s, top .2s, box-shadow 0.2s;
+      -moz-transition: background-color 0.2s, border-color 0.2s, top .2s, box-shadow 0.2s;
+      -o-transition: background-color 0.2s, border-color 0.2s, top .2s, box-shadow 0.2s;
+      -ms-transition: background-color 0.2s, border-color 0.2s, top .2s, box-shadow 0.2s;
+      transition: background-color 0.2s, border-color 0.2s, top .2s, box-shadow 0.2s;
+	}
+	
+	ul.rollover-effect a:hover, ul.rollover-effect a:focus {
+	  background-color: #fdca00;
+	  border-color: #fda700;
+	}
+	
+	ul.rollover-effect a:active {
+	  top: 3px;  /* make it move down by three pixels as though it is being pressed */
+	  box-shadow: 0 1px 2px rgba(0,0,0,.5); /* make it move down by three pixels as though it is being pressed */
+	}
+	
+	p.transform-element {
+	  width: 300px;
+	  height: 400px;
+	  text-align: center;
+	  background-color: #fdca00;
+	  transform: rotate(-10deg);
+	  margin: 100px auto;
+	}
+	
+	/* make any element vertically center align */
+	p.transform-element .ver-align {
+	  position: relative;
+	  top: 45%;
+	  transform: perspective(1px) translateY(-50%);
+	}
+	
+	#trans-origin {
+	  position: relative;
+	  width: 600px;
+	  height: 300px;
+	}
+	
+	#trans-origin .img1, #trans-origin .img2 {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  margin: 50px;
+	}
+	
+	#trans-origin .img1 {
+	  opacity: .2;
+	}
+	
+	#trans-origin .img2 {
+	  transform: rotate(25deg);
+	  transform-origin: 100% 0;
+	}
+	
+	#smooth-multiple-trans {
+	  margin: 70px;
+	}
+	
+	#smooth-multiple-trans ul {
+	  list-style-type: none;
+	  padding: 0;
+	  margin: 0;
+	}
+	
+	#smooth-multiple-trans li {
+	  float: left;
+	  margin-right: 10px;
+	}
+	
+	#smooth-multiple-trans img {
+	  width: 200px;
+	  height: 150px;
+	  box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+	  -webkit-transition: -webkit-transform .3s ease-in-out; 
+	  -moz-transition: -moz-transform .3s ease-in-out; 
+	  -o-transition: -o-transform .3s ease-in-out; 
+	  -ms-transition: -ms-transform .3s ease-in-out; 
+	  transition: transform .3s ease-in-out; 
+	}
+	
+	#smooth-multiple-trans a:hover img {
+	  box-shadow: 6px 6px 6px rgba(0,0,0,.3);
+    }
+
+	#smooth-multiple-trans a:hover #img1, a:focus #img1 {
+	  webkit-transform: scale(1.5) rotate(-3deg);
+	  -moz-transform: scale(1.5) rotate(-3deg);
+	  -o-transform: scale(1.5) rotate(-3deg);
+	  -ms-transform: scale(1.5) rotate(-3deg);
+	  transform: scale(1.5) rotate(-3deg);
+	}
+	
+	#smooth-multiple-trans a:hover #img2, a:focus #img2  {
+	  -webkit-transform: scale(1.5) rotate(5deg);
+	  -moz-transform: scale(1.5) rotate(5deg);
+	  -o-transform: scale(1.5) rotate(5deg);
+	  -ms-transform: scale(1.5) rotate(5deg);
+	  transform: scale(1.5) rotate(5deg);
+    }
+	
+    #smooth-multiple-trans a:hover #img3, a:focus #img3  {
+	  -webkit-transform: scale(1.5) rotate(-7deg);
+	  -moz-transform: scale(1.5) rotate(-7deg);
+	  -o-transform: scale(1.5) rotate(-7deg);
+	  -ms-transform: scale(1.5) rotate(-7deg);
+	  transform: scale(1.5) rotate(-7deg);
+    }
+	
+    #smooth-multiple-trans a:hover #img4, a:focus #img4  {
+      -webkit-transform: scale(1.5) rotate(2deg);
+	  -moz-transform: scale(1.5) rotate(2deg);
+	  -o-transform: scale(1.5) rotate(2deg);
+	  -ms-transform: scale(1.5) rotate(2deg);
+      transform: scale(1.5) rotate(2deg);
+    }
+	
+	@-webkit-keyframes colors {
+      0% { background-color: red; }
+      20% { background-color: orange; }
+      40% { background-color: yellow; }
+      60% { background-color: green; }
+      80% { background-color: blue; }
+      100% { background-color: purple; }
+    }
+
+    @-moz-keyframes colors {
+      0% { background-color: red; }
+      20% { background-color: orange; }
+      40% { background-color: yellow; }
+      60% { background-color: green; }
+      80% { background-color: blue; }
+      100% { background-color: purple; }
+    }
+	
+    @-o-keyframes colors {
+      0% { background-color: red; }
+      20% { background-color: orange; }
+      40% { background-color: yellow; }
+      60% { background-color: green; }
+      80% { background-color: blue; }
+      100% { background-color: purple; }
+    }
+	
+    @-ms-keyframes colors {
+      0% { background-color: red; }
+      20% { background-color: orange; }
+      40% { background-color: yellow; }
+      60% { background-color: green; }
+      80% { background-color: blue; }
+      100% { background-color: purple; }
+    } 
+
+    #magic {
+      clear: left;
+	  width: 10em;
+	  padding: 1em;
+	  margin-top: 8em;
+	  font-size: 2em;
+	  text-align: center;
+	  color: #fff;
+	  background-color: gray;
+	  border-radius: 1em;
+    }
+
+    #magic {
+	  -webkit-animation: colors 20s linear infinite alternate;
+	  -moz-animation: colors 20s linear infinite alternate;
+	  -o-animation: colors 20s linear infinite alternate;
+	  -ms-animation: colors 20s linear infinite alternate;
+	  animation: colors 20s linear infinite alternate;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#" class="smooth">awesomesauce</a>
+  
+  <a href="#" class="width-trans">width</a>
+  
+  <a href="#" class="letter-spacing-trans">awesomesauce</a>
+  
+  <a href="#" class="multiple-trans">awesomesauce</a>
+  
+  <ul class="rollover-effect">
+    <li><a href="">Men</a></li>
+    <li><a href="">Women</a></li>
+    <li><a href="">Kids</a></li>
+    <li><a href="">SALE</a></li>
+  </ul>
+  
+  <p class="transform-element"><span class="ver-align">Transform Element</span></p>
+  
+  <div id="trans-origin">
+    <img src="redwoods.jpg" class="img1" alt=""></img>
+    <img src="redwoods.jpg" class="img2" alt=""></img>
+  </div>
+  
+  <div id="smooth-multiple-trans">
+    <ul>
+      <li><a href="#"><img src="anchovies.jpg" id="img1" alt=""></a></li>
+      <li><a href="#"><img src="jellyfish1.jpg" id="img2" alt=""></a></li>
+      <li><a href=""><img src="bluejellyfish.jpg" id="img3" alt=""></a></li>
+      <li><a href=""><img src="seadragon.jpg" id="img4"alt=""></a></li>
+    </ul>
+  </div>
+  
+  <div id="magic">Magic!</div>
+
+</body>
+</html>

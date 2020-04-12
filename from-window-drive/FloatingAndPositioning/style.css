@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.test-line {
+  background-color: #c2f670;
+}
+
+p.test-block {
+  background-color: #c2f670;
+}
+
+.normal-flow {
+  background-color: #FFF799;
+  border: 2px solid #6C4788;
+  width: 500px;
+  padding: 10px;
+}
+
+.floating-flow {
+  background-color: #FFF799;
+  border: 2px solid #6C4788;
+  width: 500px;
+  padding: 10px;
+}
+
+.floating-flow img {
+  float: right;
+}
+
+.float-inline {
+  background-color: #FFF799;
+  border: 2px solid #6C4788;
+  width: 500px;
+  padding: 10px;
+}
+
+.float-inline span {
+  background-color: #9D080D;
+  color: #FFF;
+  float: right;
+  width: 200px;
+  padding: 5px;
+}
+
+.float-block {
+  background-color: #FFF799;
+  border: 2px solid #6C4788;
+}
+
+.float-block p {
+  border: 1px solid red;
+}
+
+.float-block p.float {
+  float: left;
+  width: 200px;
+  background-color: #A5D3DE;
+  margin-top: 0;
+}
+
+div.nav1 {
+  clear: left;
+}
+
+ul.navigation1 li {
+  background-color: #c2f670;
+  display: inline;
+}
+
+ul.navigation1 li a {
+  text-decoration: none;
+}
+
+ul.navigation1 li a:hover {
+  background-color: yellow;
+}
+
+ul.navigation2 {
+  list-style-type: none; /* turn off the bullet list */
+  margin: 0;
+  padding: 0;
+}
+
+ul.navigation2 li {
+  float: left;
+}
+
+ul.navigation2 li a {
+  background-color: #c2f670;
+  text-decoration: none;
+  display: block;
+  padding: 0 10px;
+}
+
+ul.navigation2 li a:hover {
+  background-color: yellow;
+}
+
+div.nav3 {
+  clear: left;
+  margin-top: 50px;
+}
+
+ul.navigation3 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.navigation3 li {
+  float: left;
+}
+
+ul.navigation3 li a {
+  display: block;
+  background-color: #6E7B8B;
+  color: #FFF;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 30px;
+  border-radius: 10px 10px 0 0;
+}
+
+ul.navigation3 li a:hover {
+  background-color: #c2f670;
+  color: blue;
+}
+
+div.containing-float {
+  clear: left;
+  border: 1px solid red;
+  margin-top: 100px;
+  padding: 0 10px;
+  background-color: #c2f670;
+}
+
+div.containing-float h4 {
+  margin: 0;
+}
+
+p.col-one {
+  float: left;
+  width: 50%;
+}
+
+div#absolute-position {
+  background-color: #CCC;
+}
+div#position-content {
+  position: relative;
+  overflow: auto; /* a trick if container element is too small for its containing element so it creates hangging element (the containing element hang out from its container element*/
+  width: 100%;
+  height: 200px;
+  margin-top: 10px;
+}
+
+div#position-content .content {
+  position: absolute;
+  width: 200px;
+  top: 0;
+  left: 0;
+  background-color: #AFD479;
+  padding: 10px;
+}
+
+div#position-content li.special {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: fuchsia
+}
+
+div#position-content p {
+  background-color: #c2f670;
+  float: right;
+  width: 85%;
+  margin-top: 0;
+}
