@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seamless Login</title>
+
+
+</head>
+<body>
+  <div>
+    <input type="text" id="urla" name="urla" style="width: 100%" 
+    value="http://localhost:3000/?pId=dc6d7de0-cb0b-11ea-aa8b-6521aef536d7&appId=2f32e050-3089-11eb-93be-d1009472ec40&auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiIyZjMyZTA1MC0zMDg5LTExZWItOTNiZS1kMTAwOTQ3MmVjNDAiLCJzdWIiOiJkNTZmNDU5MC02NmI4LTExZWItOTEyOS04ZmFhMmU2MTAzNGQiLCJleHAiOjE2MzA1NDgwMDV9.w28tI9loyR11F2JIWIk6eD3nR8m8PbZ1YUYBmEw7mYg"
+    />
+  </div>
+  <div>
+    <button onclick="winopen()">Open Prixa</button>
+  </div>
+
+  <script>
+    function winopen() {
+      const urlp = document.getElementById("urla").value;
+      console.log("urlp: ", urlp);
+      window.open(urlp);
+    }
+  </script>
+</body>
+</html>
