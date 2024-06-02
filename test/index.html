@@ -2,19 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <style>
-    .circle {
-      background: #000;
-      height: 100px;
-      width: 100px;
-      border-radius: 50%;
-    }
-  </style>
+  <script type="text/javascript" src="./source.js"></script>
 </head>
 <body>
-  <div class="circle"></div>
+  <input id="num-input" />
+  <button id="btn-generate">Generate</button>
+
+  <!-- <script src="./source.js"></script> -->
+  <script>
+    const numInput = document.querySelector("#num-input");
+    const btnGenerate = document.querySelector("#btn-generate");
+
+    btnGenerate.addEventListener("click", generateFizz);
+    
+    // function generateFizz() {
+    //   console.log(numInput.value)
+    //   const num = numInput.value;
+    //   for (let i = 1; i <= num; i++) {
+    //     if (i % 15 === 0) {
+    //       createEl("Frontend");
+    //     } else if (i % 5 === 0) {
+    //       createEl("Buzz");
+    //     } else if (i % 3 === 0) {
+    //       createEl("Fizz");
+    //     } else {
+    //       createEl(i);
+    //     }
+    //   }
+    // }
+
+    // function createEl(val) {
+    //   const div = document.createElement("div");
+    //   div.textContent = val;
+    //   document.body.appendChild(div);
+    // }
+  </script>
 </body>
 </html>
